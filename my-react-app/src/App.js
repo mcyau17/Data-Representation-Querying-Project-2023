@@ -1,15 +1,12 @@
 import './App.css';
-import Header from './components/header';
-import Content from './components/content';
-import Footer from './components/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Mainbody from './components/content';
-import Start from './components/header';
-import Final from './components/footer';
+import Create from './components/create';
+import Read from './components/read'; 
 
 function App() {
   return (
@@ -17,7 +14,7 @@ function App() {
     <div className="App">
        <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="/">Navbar</Navbar.Brand>
+          <Navbar.Brand href="/">NavBar</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/create">Create</Nav.Link>
@@ -27,12 +24,12 @@ function App() {
       </Navbar>
       <Routes>
         <Route path='/' element={<Mainbody></Mainbody>}></Route>
-        <Route path='/read' element={<Start></Start>}></Route>
-        <Route path='/create' element={<Final></Final>}></Route>
+        <Route path='/read' element={<Read></Read>}></Route>
+        <Route path='/create' element={<Create></Create>}></Route>
       </Routes>
       {/* <Header></Header>
-      <Content></Content>
-      <Footer /> */}
+      <Read></Read>
+      <Create /> */}
     </div>
     </BrowserRouter>
   );  
